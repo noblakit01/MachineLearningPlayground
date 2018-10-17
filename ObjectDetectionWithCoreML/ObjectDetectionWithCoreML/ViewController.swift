@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreML
 
 class ViewController: UIViewController {
   
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
   var output: AVCaptureVideoDataOutput!
   
   var cameraQueue: DispatchQueue!
+  let model = MobileNet()
   
   @IBOutlet weak var previewView: UIImageView!
   
@@ -55,6 +57,7 @@ class ViewController: UIViewController {
     cameraQueue = DispatchQueue(label: "CameraQueue")
     output.setSampleBufferDelegate(self, queue: cameraQueue)
     
+    
     if session.canAddOutput(output) {
       session.addOutput(output)
     }
@@ -75,6 +78,14 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     let ciImage = CIImage(cvImageBuffer: imageBuffer)
     let image = UIImage(ciImage: ciImage)
+    
+    do {
+      let output = try model.prediction(image: imageBuffer)
+      print(output)
+    } catch {
+      print(error)
+    }
+    
     DispatchQueue.main.async { [weak self] in
       self?.previewView.image = image
     }

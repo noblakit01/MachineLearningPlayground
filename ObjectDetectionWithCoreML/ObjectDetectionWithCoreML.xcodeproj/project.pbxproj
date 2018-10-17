@@ -14,6 +14,13 @@
 		521957BA21771F220073ECBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521957B821771F220073ECBE /* LaunchScreen.storyboard */; };
 		521957C521771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521957C421771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift */; };
 		521957D1217720A40073ECBE /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521957D0217720A40073ECBE /* MobileNet.mlmodel */; };
+		521957D3217730890073ECBE /* MobileNetModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521957D2217730890073ECBE /* MobileNetModelTests.swift */; };
+		521957DA217734720073ECBE /* dog_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 521957D5217734720073ECBE /* dog_1.png */; };
+		521957DB217734720073ECBE /* dog_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 521957D6217734720073ECBE /* dog_0.png */; };
+		521957DC217734720073ECBE /* dog_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 521957D7217734720073ECBE /* dog_2.png */; };
+		521957DD217734720073ECBE /* dog_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 521957D8217734720073ECBE /* dog_3.png */; };
+		521957DE217734720073ECBE /* dog_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 521957D9217734720073ECBE /* dog_4.png */; };
+		529DAB112177371E0094176C /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DAB102177371E0094176C /* ImageProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +45,13 @@
 		521957C421771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionWithCoreMLTests.swift; sourceTree = "<group>"; };
 		521957C621771F220073ECBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		521957D0217720A40073ECBE /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		521957D2217730890073ECBE /* MobileNetModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNetModelTests.swift; sourceTree = "<group>"; };
+		521957D5217734720073ECBE /* dog_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog_1.png; sourceTree = "<group>"; };
+		521957D6217734720073ECBE /* dog_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog_0.png; sourceTree = "<group>"; };
+		521957D7217734720073ECBE /* dog_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog_2.png; sourceTree = "<group>"; };
+		521957D8217734720073ECBE /* dog_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog_3.png; sourceTree = "<group>"; };
+		521957D9217734720073ECBE /* dog_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog_4.png; sourceTree = "<group>"; };
+		529DAB102177371E0094176C /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,7 @@
 		521957AE21771F200073ECBE /* ObjectDetectionWithCoreML */ = {
 			isa = PBXGroup;
 			children = (
+				529DAB102177371E0094176C /* ImageProcessor.swift */,
 				521957CF217720920073ECBE /* CoreMLModel */,
 				521957AF21771F200073ECBE /* AppDelegate.swift */,
 				521957B121771F200073ECBE /* ViewController.swift */,
@@ -93,8 +108,10 @@
 		521957C321771F220073ECBE /* ObjectDetectionWithCoreMLTests */ = {
 			isa = PBXGroup;
 			children = (
+				521957D4217734630073ECBE /* Dog */,
 				521957C421771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift */,
 				521957C621771F220073ECBE /* Info.plist */,
+				521957D2217730890073ECBE /* MobileNetModelTests.swift */,
 			);
 			path = ObjectDetectionWithCoreMLTests;
 			sourceTree = "<group>";
@@ -105,6 +122,18 @@
 				521957D0217720A40073ECBE /* MobileNet.mlmodel */,
 			);
 			path = CoreMLModel;
+			sourceTree = "<group>";
+		};
+		521957D4217734630073ECBE /* Dog */ = {
+			isa = PBXGroup;
+			children = (
+				521957D6217734720073ECBE /* dog_0.png */,
+				521957D5217734720073ECBE /* dog_1.png */,
+				521957D7217734720073ECBE /* dog_2.png */,
+				521957D8217734720073ECBE /* dog_3.png */,
+				521957D9217734720073ECBE /* dog_4.png */,
+			);
+			path = Dog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +227,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521957DD217734720073ECBE /* dog_3.png in Resources */,
+				521957DA217734720073ECBE /* dog_1.png in Resources */,
+				521957DC217734720073ECBE /* dog_2.png in Resources */,
+				521957DE217734720073ECBE /* dog_4.png in Resources */,
+				521957DB217734720073ECBE /* dog_0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +244,7 @@
 			files = (
 				521957B221771F200073ECBE /* ViewController.swift in Sources */,
 				521957B021771F200073ECBE /* AppDelegate.swift in Sources */,
+				529DAB112177371E0094176C /* ImageProcessor.swift in Sources */,
 				521957D1217720A40073ECBE /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521957C521771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift in Sources */,
+				521957D3217730890073ECBE /* MobileNetModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
