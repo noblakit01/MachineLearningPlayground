@@ -13,6 +13,7 @@
 		521957B721771F220073ECBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521957B621771F220073ECBE /* Assets.xcassets */; };
 		521957BA21771F220073ECBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521957B821771F220073ECBE /* LaunchScreen.storyboard */; };
 		521957C521771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521957C421771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift */; };
+		521957D1217720A40073ECBE /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 521957D0217720A40073ECBE /* MobileNet.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		521957AC21771F200073ECBE /* ObjectDetectionWithCoreML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectDetectionWithCoreML.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		521957AF21771F200073ECBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		521957B121771F200073ECBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		521957B121771F200073ECBE /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		521957B421771F200073ECBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		521957B621771F220073ECBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521957B921771F220073ECBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		521957C021771F220073ECBE /* ObjectDetectionWithCoreMLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectDetectionWithCoreMLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		521957C421771F220073ECBE /* ObjectDetectionWithCoreMLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionWithCoreMLTests.swift; sourceTree = "<group>"; };
 		521957C621771F220073ECBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521957D0217720A40073ECBE /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		521957AE21771F200073ECBE /* ObjectDetectionWithCoreML */ = {
 			isa = PBXGroup;
 			children = (
+				521957CF217720920073ECBE /* CoreMLModel */,
 				521957AF21771F200073ECBE /* AppDelegate.swift */,
 				521957B121771F200073ECBE /* ViewController.swift */,
 				521957B321771F200073ECBE /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				521957C621771F220073ECBE /* Info.plist */,
 			);
 			path = ObjectDetectionWithCoreMLTests;
+			sourceTree = "<group>";
+		};
+		521957CF217720920073ECBE /* CoreMLModel */ = {
+			isa = PBXGroup;
+			children = (
+				521957D0217720A40073ECBE /* MobileNet.mlmodel */,
+			);
+			path = CoreMLModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 			files = (
 				521957B221771F200073ECBE /* ViewController.swift in Sources */,
 				521957B021771F200073ECBE /* AppDelegate.swift in Sources */,
+				521957D1217720A40073ECBE /* MobileNet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjectDetectionWithCoreML/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObjectDetectionWithCoreML/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
