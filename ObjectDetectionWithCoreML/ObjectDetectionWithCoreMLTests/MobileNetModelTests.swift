@@ -24,17 +24,14 @@ class MobileNetModelTests: XCTestCase {
             guard let image = UIImage(named: imageName, in: bundle, compatibleWith: nil) else {
                 continue
             }
-            dogImages.append(image)
+            let scaledImage = ImageProcessor.scale(image: image, to: CGSize(width: 224, height: 224))
+            dogImages.append(scaledImage)
         }
     }
     
     func testDog() {
         for image in dogImages {
-            let scaledImage = ImageProcessor.scale(image: image, to: CGSize(width: 224, height: 224))
-            let attactment = XCTAttachment(image: scaledImage)
-            attactment.lifetime = .keepAlways
-            add(attactment)
-            guard let cgImage = scaledImage.cgImage else {
+            guard let cgImage = image.cgImage else {
                 continue
             }
             guard let pixelBuffer = ImageProcessor.pixelBuffer(forImage: cgImage) else {
@@ -45,6 +42,25 @@ class MobileNetModelTests: XCTestCase {
                 print("Ahaha \(output.classLabel)")
             } catch {
                 print(error)
+            }
+        }
+    }
+    
+    func testPredictionTime() {
+        measure {
+            for image in dogImages {
+                guard let cgImage = image.cgImage else {
+                    continue
+                }
+                guard let pixelBuffer = ImageProcessor.pixelBuffer(forImage: cgImage) else {
+                    continue
+                }
+                do {
+                    let output = try model.prediction(image: pixelBuffer)
+                    print("Ahaha \(output.classLabel)")
+                } catch {
+                    print(error)
+                }
             }
         }
     }
