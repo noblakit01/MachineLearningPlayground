@@ -13,25 +13,10 @@ import CoreGraphics
 
 struct ImageProcessor {
     static func scale(image: UIImage, to size: CGSize) -> UIImage {
-        guard let cgImage = image.cgImage else {
-            return image
-        }
+        UIGraphicsBeginImageContextWithOptions(size, false, image.scale)
+        image.draw(in: CGRect(origin: .zero, size: size))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         
-        let bitsPerComponent = cgImage.bitsPerComponent
-        let bytesPerRow = cgImage.bytesPerRow
-        guard let colorSpace = cgImage.colorSpace else {
-            return image
-        }
-        let bitmapInfo = cgImage.bitmapInfo
-        
-        guard let context = CGContext(data: nil, width: Int(size.width), height: Int(size.height), bitsPerComponent: bitsPerComponent, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue) else {
-            return image
-        }
-        
-        context.interpolationQuality = .medium
-        context.draw(cgImage, in: CGRect(origin: CGPoint.zero, size: size))
-        
-        let scaledImage = context.makeImage().flatMap { UIImage(cgImage: $0) }
         return scaledImage ?? image
     }
     

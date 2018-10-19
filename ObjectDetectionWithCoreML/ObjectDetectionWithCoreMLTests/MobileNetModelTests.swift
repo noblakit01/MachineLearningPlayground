@@ -30,8 +30,9 @@ class MobileNetModelTests: XCTestCase {
     
     func testDog() {
         for image in dogImages {
-            let scaledImage = ImageProcessor.scale(image: image, to: CGSize(width: 225, height: 225))
+            let scaledImage = ImageProcessor.scale(image: image, to: CGSize(width: 224, height: 224))
             let attactment = XCTAttachment(image: scaledImage)
+            attactment.lifetime = .keepAlways
             add(attactment)
             guard let cgImage = scaledImage.cgImage else {
                 continue
@@ -41,8 +42,7 @@ class MobileNetModelTests: XCTestCase {
             }
             do {
                 let output = try model.prediction(image: pixelBuffer)
-                
-                print(output)
+                print("Ahaha \(output.classLabel)")
             } catch {
                 print(error)
             }
