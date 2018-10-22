@@ -16,7 +16,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dl-XZ-SyW">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-vf-yZi">
+                                        <rect key="frame" x="166.5" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FLb-vf-yZi" firstAttribute="top" secondItem="1Dl-XZ-SyW" secondAttribute="top" id="hTw-OA-6Xw"/>
+                                    <constraint firstItem="FLb-vf-yZi" firstAttribute="centerX" secondItem="1Dl-XZ-SyW" secondAttribute="centerX" id="obm-sB-5tl"/>
+                                    <constraint firstAttribute="height" constant="120" id="ows-sM-gHo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1Dl-XZ-SyW" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rq0-hd-E4b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Dl-XZ-SyW" secondAttribute="trailing" id="vxN-5W-2d3"/>
+                            <constraint firstItem="1Dl-XZ-SyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xmd-5W-GlV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nd0-OU-EVv">
@@ -32,6 +56,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="classificationLabel" destination="FLb-vf-yZi" id="1Nt-Nw-0Tj"/>
                         <outlet property="detectButton" destination="cb5-Wz-YtL" id="gzV-tu-5vr"/>
                         <outlet property="resetButton" destination="a0c-J6-UZw" id="2V0-vp-eor"/>
                     </connections>

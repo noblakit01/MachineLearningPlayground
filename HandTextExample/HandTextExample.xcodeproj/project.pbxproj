@@ -19,6 +19,8 @@
 		529DAB562179C6690094176C /* UIBezierPath+WeightedPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DAB512179C6690094176C /* UIBezierPath+WeightedPoint.swift */; };
 		529DAB572179C6690094176C /* SignatureDrawingModelAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DAB522179C6690094176C /* SignatureDrawingModelAsync.swift */; };
 		529DAB582179C6690094176C /* SignatureDrawingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DAB532179C6690094176C /* SignatureDrawingModel.swift */; };
+		529DAB5A2179C7C70094176C /* MNIST.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 529DAB592179C7C70094176C /* MNIST.mlmodel */; };
+		529DAB5C2179CCFC0094176C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DAB5B2179CCFC0094176C /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		529DAB512179C6690094176C /* UIBezierPath+WeightedPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+WeightedPoint.swift"; sourceTree = "<group>"; };
 		529DAB522179C6690094176C /* SignatureDrawingModelAsync.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureDrawingModelAsync.swift; sourceTree = "<group>"; };
 		529DAB532179C6690094176C /* SignatureDrawingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureDrawingModel.swift; sourceTree = "<group>"; };
+		529DAB592179C7C70094176C /* MNIST.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNIST.mlmodel; sourceTree = "<group>"; };
+		529DAB5B2179CCFC0094176C /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGImagePropertyOrientation+UIImageOrientation.swift"; path = "../../Vision + ML Example from Apple/Vision+ML Example/CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +95,13 @@
 			children = (
 				529DAB492179C49F0094176C /* UberSignature */,
 				529DAB292179C3C30094176C /* AppDelegate.swift */,
+				529DAB5B2179CCFC0094176C /* CGImagePropertyOrientation+UIImageOrientation.swift */,
 				529DAB2B2179C3C30094176C /* ViewController.swift */,
 				529DAB2D2179C3C30094176C /* Main.storyboard */,
 				529DAB302179C3C40094176C /* Assets.xcassets */,
 				529DAB322179C3C40094176C /* LaunchScreen.storyboard */,
 				529DAB352179C3C40094176C /* Info.plist */,
+				529DAB592179C7C70094176C /* MNIST.mlmodel */,
 			);
 			path = HandTextExample;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 				529DAB562179C6690094176C /* UIBezierPath+WeightedPoint.swift in Sources */,
 				529DAB4D2179C4B30094176C /* SignatureDrawingViewController.swift in Sources */,
 				529DAB572179C6690094176C /* SignatureDrawingModelAsync.swift in Sources */,
+				529DAB5A2179C7C70094176C /* MNIST.mlmodel in Sources */,
+				529DAB5C2179CCFC0094176C /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				529DAB552179C6690094176C /* CGPoint+Extensions.swift in Sources */,
 				529DAB2C2179C3C30094176C /* ViewController.swift in Sources */,
 				529DAB582179C6690094176C /* SignatureDrawingModel.swift in Sources */,
